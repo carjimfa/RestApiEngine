@@ -7,7 +7,7 @@ namespace TestConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //We create a new instance of RestEngine
             var engine = new RestEngine("https://reqres.in/api/", "application/json")
                 .AddHeader("User-Agent", "RestEngine .NET");
             var task = engine.ProcessGetSync("users");

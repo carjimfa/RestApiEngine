@@ -11,7 +11,7 @@ namespace RestApiEngine
     {
         private string BaseUrl { get; set; }
         private string Accept { get; set; }
-        public List<string> GetUriParams { get; private set; } = new List<string>();
+        public List<string> UriParams { get; private set; } = new List<string>();
         public Dictionary<string, string> QueryParams { get; private set; } = new Dictionary<string, string>();
         public StringContent StringBodyContent { get; private set; }
 
@@ -47,7 +47,7 @@ namespace RestApiEngine
 
         public RestEngine AddUriParam(string param)
         {
-            GetUriParams.Add(param);
+            UriParams.Add(param);
             return this;
         }
 
@@ -109,7 +109,7 @@ namespace RestApiEngine
 
         public RestEngine ClearUriParam(string key)
         {
-            GetUriParams.Remove(key);
+            UriParams.Remove(key);
             return this;
         }
 
@@ -121,7 +121,7 @@ namespace RestApiEngine
 
         public RestEngine ClearUriParams()
         {
-            GetUriParams = new List<string>();
+            UriParams = new List<string>();
             return this;
         }
 
@@ -187,7 +187,7 @@ namespace RestApiEngine
 
         private string GetCompleteUrl()
         {
-            var completeUrl = GetCompleteUrl(GetUriParams);
+            var completeUrl = GetCompleteUrl(UriParams);
             if (QueryParams.Count > 0)
             {
                 AddQueryParamsToUrl(QueryParams, ref completeUrl);
@@ -210,9 +210,9 @@ namespace RestApiEngine
                 {
                     completeUrl = completeUrl + "/";
                 }
-                if (!GetUriParams.Contains(part))
+                if (!UriParams.Contains(part))
                 {
-                    GetUriParams.Add(part);
+                    UriParams.Add(part);
                 }
                 completeUrl = completeUrl + part;
             }
