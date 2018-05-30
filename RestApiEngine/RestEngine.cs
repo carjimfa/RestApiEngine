@@ -131,6 +131,15 @@ namespace RestApiEngine
             return this;
         }
 
+        public RestEngine ClearEverything()
+        {
+            ClearAccept();
+            ClearHeaders();
+            ClearQueryParams();
+            ClearUriParams();
+            return this;
+        }
+
         public async Task<HttpResponseMessage> ProcessGetAsync(string path)
         {
             ValidateCall();
