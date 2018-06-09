@@ -14,10 +14,10 @@ var processGetResult = engine.ProcessGetSync("users");
 var result = task.Content.ReadAsStringAsync().Result;
 ```
 
-## First Get Call with
+## First Get Call with Query parameters
 
 ```csharp
-engine.ClearUriParams() //Clears URI Param
+engine.ClearUriParams() //Clears URI Params
     .ClearHeaders() // Clears Headers
     .AddAccept("application/json") //Sets Accept
     .AddHeader("User-Agent", ".NET Foundation Repository Reporter")
