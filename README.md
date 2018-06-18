@@ -211,6 +211,78 @@ var taskResult = await engine.ProcessPostAsync();
 var result = engine.ProcessPostSync();
 ```
 
+### PUT Calls (Min Version 0.1)
+
+#### PUT by Path
+
+We can make calls directly to a path if we don't want to set up all the engine, we can set up an engine with a base URL and then make calls to a /path.
+
+##### Async PUT By Path
+
+```csharp
+var engine=new RestEngine("http://example.com");
+var taskResult = await engine.ProcessPutAsync("/api/users");
+```
+
+##### Sync PUT By Path
+
+```csharp
+var engine=new RestEngine("http://example.com");
+var result = engine.ProcessPutSync("/api/users");
+```
+
+#### Process PUT With everything setted up
+
+This makes the Put call to the environment or context built with headers, baseUrl, Accept, body string, uri and query params.
+
+##### Async PUT by context
+
+```csharp
+var taskResult = await engine.ProcessPutAsync();
+```
+
+##### Sync PUT by context
+
+```csharp
+var result = engine.ProcessPutSync();
+```
+
+### DELETE Calls (Min Version 0.1)
+
+#### DELETE by Path
+
+We can make calls directly to a path if we don't want to set up all the engine, we can set up an engine with a base URL and then make calls to a /path.
+
+##### Async DELETE By Path
+
+```csharp
+var engine=new RestEngine("http://example.com");
+var taskResult = await engine.ProcessDeleteAsync("/api/users");
+```
+
+##### Sync DELETE By Path
+
+```csharp
+var engine=new RestEngine("http://example.com");
+var result = engine.ProcessDeleteSync("/api/users");
+```
+
+#### Process PUT With everything setted up
+
+This makes the Put call to the environment or context built with headers, baseUrl, Accept, body string, uri and query params.
+
+##### Async DELETE by context
+
+```csharp
+var taskResult = await engine.ProcessDeleteAsync();
+```
+
+##### Sync DELETE by context
+
+```csharp
+var result = engine.ProcessDeleteSync();
+```
+
 ## Contribute
 
 This is the first package/library made by carjimfa. Doubts, support and more, ask me anything on twitter: [@carjimfa]("https://twitter.com/carjimfa") :)
