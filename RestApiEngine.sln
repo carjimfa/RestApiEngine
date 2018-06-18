@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiEngine", "RestApiEngine\RestApiEngine.csproj", "{160EB87C-EA35-425F-8636-F0746C4AABDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiEngine", "RestApiEngine\RestApiEngine.csproj", "{160EB87C-EA35-425F-8636-F0746C4AABDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{BA02D84D-9333-49A8-ACBB-1A35B14C3B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{BA02D84D-9333-49A8-ACBB-1A35B14C3B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiEngine.ApiResponseEngine", "RestApiEngine.ApiResponseEngine\RestApiEngine.ApiResponseEngine.csproj", "{1022C8AE-ED6F-4CF4-8FEB-96A85B8A4572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BA02D84D-9333-49A8-ACBB-1A35B14C3B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA02D84D-9333-49A8-ACBB-1A35B14C3B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA02D84D-9333-49A8-ACBB-1A35B14C3B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1022C8AE-ED6F-4CF4-8FEB-96A85B8A4572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1022C8AE-ED6F-4CF4-8FEB-96A85B8A4572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1022C8AE-ED6F-4CF4-8FEB-96A85B8A4572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1022C8AE-ED6F-4CF4-8FEB-96A85B8A4572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

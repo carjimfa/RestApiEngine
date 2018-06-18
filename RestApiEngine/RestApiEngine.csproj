@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>0.0.2</Version>
+    <Authors>Carlos Jiménez</Authors>
+    <Description>Wrapper for .NET's HttpClient. RestApiEngine makes easier to call REST APIs.</Description>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Rest API Engine HttpClient</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/carjimfa/RestApiEngine</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/carjimfa/RestApiEngine</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

@@ -194,6 +194,46 @@ namespace RestApiEngine
             return PostAsync(GetCompleteUrl(path), StringBodyContent).Result;
         }
 
+        public HttpResponseMessage ProcessPutStringSync()
+        {
+            return PutAsync(GetCompleteUrl(), StringBodyContent).Result;
+        }
+
+        public Task<HttpResponseMessage> ProcessPutStringAsync()
+        {
+            return PutAsync(GetCompleteUrl(), StringBodyContent);
+        }
+
+        public HttpResponseMessage ProcessDeleteSync()
+        {
+            return DeleteAsync(GetCompleteUrl()).Result;
+        }
+
+        public Task<HttpResponseMessage> ProcessDeleteAsync()
+        {
+            return DeleteAsync(GetCompleteUrl());
+        }
+
+        public HttpResponseMessage ProcessPutStringSync(string path)
+        {
+            return PutAsync(GetCompleteUrl(path), StringBodyContent).Result;
+        }
+
+        public Task<HttpResponseMessage> ProcessPutStringAsync(string path)
+        {
+            return PutAsync(GetCompleteUrl(path), StringBodyContent);
+        }
+
+        public HttpResponseMessage ProcessDeleteSync(string path)
+        {
+            return DeleteAsync(GetCompleteUrl(path)).Result;
+        }
+
+        public Task<HttpResponseMessage> ProcessDeleteAsync(string path)
+        {
+            return DeleteAsync(GetCompleteUrl(path));
+        }
+
         private string GetCompleteUrl()
         {
             var completeUrl = GetCompleteUrl(UriParams);
